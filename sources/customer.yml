@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: customer
+    schema: public
+    database: dbt_training
+    tables:
+      - name: customers
+        identifier: customers
+        description: "A table of customers"
+        columns:
+          - name: customer_id
+            description: "The unique identifier for the customer"
+            tests:
+              - unique
+          - name: first_name
+            description: "The customer's first name"
+          - name: last_name
+            description: "The customer's last name"
+          - name: email
+            description: "The customer's email address"
+          - name: phone
+            description: "The customer's phone number"
+          - name: address
+            description: "The customer's address"
